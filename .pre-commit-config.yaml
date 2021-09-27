@@ -1,7 +1,6 @@
-#repo: git://github.com/dnephin/pre-commit-golang
-rev: master
-hooks:
-  - id: go-fmt
-  - id: go-vet
-  - id: go-imports
-  - id: golangci-lint
+repos:
+-   repo: https://github.com/PyCQA/flake8
+    rev: 3.9.2
+    hooks:
+    -   id: flake8
+        additional_dependencies: [flake8-typing-imports==1.10.0]
