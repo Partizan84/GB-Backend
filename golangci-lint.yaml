@@ -9,8 +9,10 @@ linters:
 disable-all: true
 enable:
 - goconst
+- gocyclo
 - goimports
 - gofmt
+- golint
 - govet
 - bodyclose
 - deadcode
@@ -28,3 +30,11 @@ linters-setting:
 	funlen:
 		lines:100
 		statements: 50
+	errcheck:
+		check-type-assertions: true
+	gofmt:
+		simplify: true
+	gocyclo:
+		min-complexity: 10
+	golint:
+		min-confidence: 0.8
